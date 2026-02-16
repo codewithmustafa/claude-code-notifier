@@ -22,7 +22,7 @@ A lightweight hook that sends **native macOS notifications** for key Claude Code
 - Click-to-focus: tapping the notification activates your editor
 - Works even in Do Not Disturb mode
 - Global setup — works across all your projects
-- Zero dependencies beyond `terminal-notifier`
+- Minimal dependencies — just `terminal-notifier` and `jq`
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ A lightweight hook that sends **native macOS notifications** for key Claude Code
 ### Quick Install (one command)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/codewithmustafa/claude-code-notifier/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/codewithmustafa/claude-code-notifier/master/install.sh | bash
 ```
 
 ### Manual Install
