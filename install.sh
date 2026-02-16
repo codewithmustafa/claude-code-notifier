@@ -119,8 +119,8 @@ HOOK_CMD="bash ~/.claude/hooks/permission-notification.sh"
 
 if [ -f "$SETTINGS_FILE" ]; then
   # Check if hooks already configured
-  HAS_PERMISSION=$(jq -e '.hooks.PermissionRequest' "$SETTINGS_FILE" 2>/dev/null && echo "yes" || echo "no")
-  HAS_NOTIFICATION=$(jq -e '.hooks.Notification' "$SETTINGS_FILE" 2>/dev/null && echo "yes" || echo "no")
+  HAS_PERMISSION=$(jq -e '.hooks.PermissionRequest' "$SETTINGS_FILE" >/dev/null 2>&1 && echo "yes" || echo "no")
+  HAS_NOTIFICATION=$(jq -e '.hooks.Notification' "$SETTINGS_FILE" >/dev/null 2>&1 && echo "yes" || echo "no")
 
   if [ "$HAS_PERMISSION" = "yes" ] && [ "$HAS_NOTIFICATION" = "yes" ]; then
     echo -e "${YELLOW}Hooks already configured in settings.json. Skipping.${NC}"
