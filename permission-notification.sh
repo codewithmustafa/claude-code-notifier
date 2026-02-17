@@ -16,7 +16,7 @@ case "$EVENT" in
     TOOL_NAME=$(echo "$INPUT" | jq -r '.tool_name // "Unknown"')
     TITLE="Claude Code"
     MESSAGE="Permission requested: $TOOL_NAME"
-    SOUND="Ping"
+    SOUND="Pop"
     ;;
   Notification)
     NOTIFICATION_TYPE=$(echo "$INPUT" | jq -r '.notification_type // "unknown"')
