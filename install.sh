@@ -51,7 +51,7 @@ if [ -n "$FRONTMOST" ]; then
   read -p "Enable click-to-focus for $FRONTMOST_NAME? [Y/n] " -n 1 -r
   echo ""
   if [[ ! $REPLY =~ ^[Nn]$ ]]; then
-    ACTIVATE_FLAG="\n  -activate $FRONTMOST"
+    ACTIVATE_FLAG=" \\\\\n  -activate $FRONTMOST"
   fi
 fi
 
