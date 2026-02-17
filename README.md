@@ -65,7 +65,7 @@ case "$EVENT" in
     TOOL_NAME=$(echo "$INPUT" | jq -r '.tool_name // "Unknown"')
     TITLE="Claude Code"
     MESSAGE="Permission requested: $TOOL_NAME"
-    SOUND="Ping"
+    SOUND="Pop"
     ;;
   Notification)
     NOTIFICATION_TYPE=$(echo "$INPUT" | jq -r '.notification_type // "unknown"')
@@ -158,7 +158,7 @@ echo '{"hook_event_name": "Notification", "notification_type": "elicitation_dial
 
 | Event | When | Notification | Sound |
 |-------|------|-------------|-------|
-| Permission request | Claude needs approval for a tool | "Permission requested: Bash" | Ping |
+| Permission request | Claude needs approval for a tool | "Permission requested: Bash" | Pop |
 | Task completed | Claude finishes and waits for input | "Task completed — waiting for your input" | Glass |
 | Question | Claude asks you a question | "Claude has a question for you" | Ping |
 

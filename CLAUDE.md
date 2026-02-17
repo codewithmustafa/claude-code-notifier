@@ -29,7 +29,7 @@ Claude Code event → Hook fires → permission-notification.sh reads JSON from 
 
 | Hook | Matcher | Notification |
 |---|---|---|
-| `PermissionRequest` | `*` | "Permission requested: {tool_name}" (sound: Ping) |
+| `PermissionRequest` | `*` | "Permission requested: {tool_name}" (sound: Pop) |
 | `Notification` | `idle_prompt` | "Task completed — waiting for your input" (sound: Glass) |
 | `Notification` | `elicitation_dialog` | "Claude has a question for you" (sound: Ping) |
 
